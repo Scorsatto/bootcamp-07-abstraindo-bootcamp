@@ -1,3 +1,4 @@
+import dominio.Conteudo;
 import dominio.Curso;
 import dominio.Mentoria;
 
