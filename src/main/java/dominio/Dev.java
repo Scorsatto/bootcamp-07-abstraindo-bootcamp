@@ -45,7 +45,7 @@ public class Dev {
         return conteudosInscritos;
     }
 
-    public void setconteudosInscritos(Set<Conteudo> conteudosInscritos) {
+    public void setConteudosInscritos(Set<Conteudo> conteudosInscritos) {
         this.conteudosInscritos = conteudosInscritos;
     }
 

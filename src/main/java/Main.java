@@ -1,6 +1,4 @@
-import dominio.Conteudo;
-import dominio.Curso;
-import dominio.Mentoria;
+import dominio.*;
 
 import java.time.LocalDate;
 
@@ -22,9 +20,30 @@ public class Main {
         mentoria.setDescricao("Descrição mentoria Java");
         mentoria.setData(LocalDate.now());
 
-        System.out.println(curso1);
-        System.out.println(curso2);
+        Bootcamp bootcamp = new Bootcamp();
+        bootcamp.setNome("Bootcamp Java Developer");
+        bootcamp.setDescricao("Descrição Java Developer");
+        bootcamp.getConteudos().add(curso1);
+        bootcamp.getConteudos().add(curso2);
+        bootcamp.getConteudos().add(mentoria);
 
-        System.out.println(mentoria);
+        Dev devFabiano = new Dev();
+        devFabiano.setNome("Fabiano");
+        devFabiano.increverBootcamp(bootcamp);
+        devFabiano.progredir();
+
+        Dev devMiriam = new Dev();
+        devMiriam.setNome("Miriam");
+        devMiriam.increverBootcamp(bootcamp);
+        devMiriam.progredir();
+        devMiriam.progredir();
+
+        System.out.println(devFabiano.getConteudosInscritos());
+        System.out.println(devFabiano.getConteudosConcluidos());
+        System.out.println(devFabiano.calcularTotalXP());
+
+        System.out.println(devMiriam.getConteudosInscritos());
+        System.out.println(devMiriam.getConteudosConcluidos());
+        System.out.println(devMiriam.calcularTotalXP());
     }
 }
